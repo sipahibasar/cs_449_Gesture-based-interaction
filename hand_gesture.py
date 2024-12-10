@@ -73,7 +73,7 @@ backgrounds = {
     "Light Gray": np.ones((CANVAS_HEIGHT, CANVAS_WIDTH, 3), dtype=np.uint8)*230,
     "Lined Paper": create_lined_bg(),
     "Yellow Paper": np.ones((CANVAS_HEIGHT, CANVAS_WIDTH, 3), dtype=np.uint8)*255,
-    "Image (if available)": None  # will load dynamically if chosen
+    "Image (if available)": "atjpg.jpg"
 }
 
 canvas = backgrounds["Blank White"].copy()
@@ -97,17 +97,14 @@ tool_width = 60
 tools = [
     {"type":"color", "color":(0,0,255), "rect":(0, 0, tool_width, 60), "label":"Red"},
     {"type":"color", "color":(0,255,0), "rect":(0, 70, tool_width, 130), "label":"Green"},
-    {"type":"color", "color":(255,0,0), "rect":(0, 140, tool_width, 200), "label":"Blue"},
-    {"type":"color", "color":(0,0,0), "rect":(0, 210, tool_width, 270), "label":"Black"},
-    {"type":"color", "color":(255,0,255), "rect":(0, 280, tool_width, 340), "label":"Magenta"},
-    {"type":"color", "color":(0,255,255), "rect":(0, 350, tool_width, 410), "label":"Cyan"},
-    {"type":"color", "color":(255,255,0), "rect":(0, 420, tool_width, 480), "label":"Yellow"},
-    {"type":"size", "size":2, "rect":(0, 490, tool_width, 550), "label":"Size 2"},
-    {"type":"size", "size":5, "rect":(0, 560, tool_width, 620), "label":"Size 5"},
-    {"type":"size", "size":10, "rect":(0, 630, tool_width, 690), "label":"Size 10"},
-    {"type":"tool", "tool":"eraser", "rect":(0, 700, tool_width, 760), "label":"Eraser"},
-    {"type":"tool", "tool":"pen", "rect":(0, 770, tool_width, 830), "label":"Pen"},
-    {"type":"tool", "tool":"back", "rect":(0, 840, tool_width, 900), "label":"Back"}
+    {"type":"color", "color":(0,0,0), "rect":(0, 140, tool_width, 200), "label":"Black"},
+    {"type":"color", "color":(255,0,255), "rect":(0, 210, tool_width, 270), "label":"Magenta"},
+    {"type":"color", "color":(255,255,0), "rect":(0, 280, tool_width, 340), "label":"Yellow"},
+    {"type":"size", "size":5, "rect":(0, 350, tool_width, 410), "label":"Size 4"},
+    {"type":"size", "size":10, "rect":(0, 420, tool_width, 480), "label":"Size 8"},
+    {"type":"tool", "tool":"eraser", "rect":(0, 490, tool_width, 550), "label":"Eraser"},
+    {"type":"tool", "tool":"pen", "rect":(0, 560, tool_width, 620), "label":"Pen"},
+    {"type":"tool", "tool":"back", "rect":(0, 630, tool_width, 690), "label":"Back"}
 ]
 
 menu_buttons = [
