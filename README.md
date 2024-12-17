@@ -24,8 +24,8 @@ numpy==1.26.4
 1. Clone the repository or download the source code
 2. Create a virtual environment (recommended):
    ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows use: venv\Scripts\activate
+   python3.12 -m venv .venv
+   source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
    ```
 3. Install the required packages:
    ```bash
